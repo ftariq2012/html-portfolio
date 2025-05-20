@@ -1,0 +1,127 @@
+h1{
+    color: #2c3e50;
+    font-size: 30pt;
+    text-align: center;
+    display: block;
+}
+
+.main-heading{
+    color: black
+}
+
+html{
+    background-color:aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+img.front-page {
+    display: block;              /* removes inline default spacing */
+    margin: 20px auto;           /* auto left and right centers it */
+    border: 5px solid gray;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 10px 10px;
+    border-radius: 1%;
+}
+
+/* wobble physics */
+.wobble{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wobble:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* nav bar */
+.tab-nav {
+    display: flex;                   /* Enable flex layout */
+    justify-content: center;        /* Center text horizontally */
+    align-items: center;            /* Center text vertically */
+    text-align: center;
+
+    text-decoration: none;
+    padding: 2px 2px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s;
+    min-height: 50px; 
+}
+
+.tab-nav a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s;
+}
+
+.tab-nav a:hover {
+    background-color: #d0d0d0;
+}
+
+.tab-nav a.active {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+
+/* beyond code */
+.box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* allows wrapping on smaller screens */
+    margin-top: 20px;
+}
+
+.mini-box{
+    border: 1px solid black;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    background-color: #f5f5f5;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+
+@media (max-width: 768px) {
+    .tab-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        width: 90%;
+        height: auto;
+        left: 0;
+        margin: auto;
+        display: block;
+    }
+
+    h1, p {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .tab-nav a {
+        width: auto;
+        text-align: center;
+        margin: 5px 0;
+        border-radius: 5px 5px 5px 5px;
+        
+    }
+}
+
+.job{
+    border: 1px solid black;
+    padding: 5px 5px 5px 10px;
+    border-radius: 5px 5px 5px 5px;
+}
