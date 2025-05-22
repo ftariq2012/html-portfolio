@@ -9,6 +9,11 @@ h1{
     color: black
 }
 
+.sub-heading{
+    text-align: center;
+    font-size: 25pt;
+}
+
 html{
     background-color:aliceblue;
     font-family: 'Courier New', Courier, monospace;
@@ -23,6 +28,7 @@ img.front-page {
     box-shadow: 10px 10px;
     border-radius: 1%;
 }
+
 
 /* wobble physics */
 .wobble{
@@ -89,8 +95,119 @@ img.front-page {
     background-color: #f5f5f5;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
     border-radius: 5px;
+    margin: 20px;
 }
 
+.about-box {
+    max-width: 800px;
+    padding: 10px;
+    margin: auto;
+    background-color: #f9f9f9;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+
+.header-line{
+    max-width: 1000px;
+    text-align: center;
+    margin: 40px auto;
+}
+
+
+/* Interests section - comic book*/
+.comic-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.spidey {
+  position: absolute;
+  top: -40px;
+  left: 10%;
+  transform: translateX(-50%);
+  width: 50px;
+  transition: top 0.8s ease-out;
+}
+
+.comic-box:hover .spidey {
+  top: 10px;
+  animation: bounce 0.5s ease-out forwards;
+}
+
+@keyframes bounce {
+  0%   { top: -100px; }
+  60%  { top: 20px; }
+  80%  { top: 5px; }
+  100% { top: 10px; }
+}
+/* Interests section - comic book*/
+
+.gamer-box {
+  position: relative;
+  overflow: hidden;
+  --drop-height: -20px;
+}
+
+/* Controller starts above the box */
+.controller {
+  position: absolute;
+  top: var(--drop-height);
+  left: 10%;
+  transform: translateX(-50%);
+  width: 50px;
+  transition: top 0.8s ease-out;
+  pointer-events: none;
+}
+
+/* Drop down on hover and start shake */
+.gamer-box:hover .controller {
+  top: 10px;
+  animation: dropShake 0.8s ease forwards;
+}
+
+/* Custom animation that combines drop + shake */
+@keyframes dropShake {
+  0%   { top: var(--drop-height); transform: translateX(-50%) rotate(0deg); }
+  50%  { top: 15px; transform: translateX(-50%) rotate(0deg); }
+  60%  { transform: translateX(-50%) rotate(3deg); }
+  70%  { transform: translateX(-50%) rotate(-3deg); }
+  80%  { transform: translateX(-50%) rotate(2deg); }
+  90%  { transform: translateX(-50%) rotate(-2deg); }
+  100% { top: 10px; transform: translateX(-50%) rotate(0deg); }
+}
+
+
+.underline-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-hover::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+.mini-box:hover .underline-hover::after {
+  width: 100%;
+}
+
+.page-load {
+  opacity: 0;
+  animation: fadeInPage 1s ease-in forwards;
+}
+
+@keyframes fadeInPage {
+  to {
+    opacity: 1;
+  }
+}
 
 @media (max-width: 768px) {
     .tab-nav {
