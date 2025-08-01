@@ -1,4 +1,4 @@
-const heading = document.getElementsByClassName("main-heading")[0];
+const heading = $(".main-heading")[0];
 const fullText = heading.innerText;
 let charIndex = 0;
 const typingSpeed = 120;
