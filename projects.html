@@ -1,43 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Faraz Tariq | Projects</title>
-    <link rel="stylesheet" href="style.css"></link>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"></link>
-</head>
-<br>
-    <nav class="tab-nav">
-        <a href= "./index.html">Home</a>
-        <a href= "./projects.html">My Projects</a>
-        <a href= "FarazResume2025.pdf" target="_blank">Download Resume</a>
-        <a href= "./education.html">Education & Skills</a>
-        <a href="./experience.html">Experience</a>
-        <a href= "./contact.html">Contact Me</a>
-    </nav>
-    <h1 class="main-heading">My Projects</h1>
-    <h3>Bulk PDF Tool</h3>
-        <img src = "assets/pexels-photo-546819.jpeg" alt="Project Image" width="500" height="500">
-        <p>
-            The creation of this project started when my friend had a usecase for his work where he didn't 
-            wanted to do repetitive tasks on hundreds of PDFs. When he reached out to me I saw this as
-            an oppurtunity to create a Bulk PDF Editor where you can select directories with multiple PDFs
-            and do actions like Merge atatchments, Swap pages, Add Pages, Add Watermarks or Stamps. I used Python
-            to code this project and used PyPDF2 library to manipulate pdfs and logging to have cleaner logs
-            accomplish this task. With this project I reduced the time to seconds where initially it would have taken
-            my friend days to accomplish this task.
-        </p></br>
-    <h3>Self-Hosted File Manager</h3>
-        <img src = "assets/pexels-photo-546819.jpeg" alt="Project Image" width="500" height="500">
-        <p>
-            Work-In-Progess: Using a raspberry Pi as the self hosting server. Need to create a web-app 
-            that lets me access files on the server regardless of what network I am on. Also want the
-            files to be encrypted so the server can be used as a password manager as well.
-        </p></br>
-    <h3>This Website</h3>
-        <img src = "assets/pexels-photo-546819.jpeg" alt="Project Image" width="500" height="500">
-        <p>Description for project 3</p>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</body>
+  <body class="page-load">
+    <nav class="tab-nav">
+      <a href="./index.html">Home</a>
+      <a href="./projects.html">My Projects</a>
+      <a href="FarazResume2025.pdf" target="_blank">Download Resume</a>
+      <a href="./education.html">Education & Skills</a>
+      <a href="./experience.html">Experience</a>
+      <a href="./contact.html">Contact Me</a>
+      <button id="themeToggle" class="theme-btn" aria-pressed="false">
+        🌞/🌙
+      </button>
+    </nav>
+
+    <h1 class="main-heading">My Projects</h1>
+
+    <div class="projects">
+      <section class="project">
+        <h3 class="sub-heading">Bulk PDF Tool</h3>
+        <div class="project-row">
+          <img
+            class="project-image"
+            src="assets/pexels-photo-546819.jpeg"
+            alt="Bulk PDF Tool screenshot"
+          />
+          <div class="project-desc wobble">
+            <p>
+              The creation of this project started when my friend had a usecase
+              for his work where he didn't wanted to do repetitive tasks on
+              hundreds of PDFs. When he reached out to me I saw this as an
+              oppurtunity to create a Bulk PDF Editor where you can select
+              directories with multiple PDFs and do actions like Merge
+              atatchments, Swap pages, Add Pages, Add Watermarks or Stamps. I
+              used Python to code this project and used PyPDF2 library to
+              manipulate pdfs and logging to have cleaner logs accomplish this
+              task. With this project I reduced the time to seconds where
+              initially it would have taken my friend days to accomplish this
+              task.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="project">
+        <h3 class="sub-heading">Self-Hosted File Manager</h3>
+        <div class="project-row">
+          <img
+            class="project-image"
+            src="assets/pexels-photo-546819.jpeg"
+            alt="Self-hosted file manager screenshot"
+          />
+          <div class="project-desc wobble">
+            <p>
+              Work-In-Progess: Using a raspberry Pi as the self hosting server.
+              Need to create a web-app that lets me access files on the server
+              regardless of what network I am on. Also want the files to be
+              encrypted so the server can be used as a password manager as well.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="project">
+        <h3 class="sub-heading">This Website</h3>
+        <div class="project-row">
+          <img
+            class="project-image"
+            src="assets/pexels-photo-546819.jpeg"
+            alt="Website project screenshot"
+          />
+          <div class="project-desc wobble">
+            <p>Description for project 3</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer style="color: black">
+      <b>© 2025 Faraz Tariq. All rights reserved.</b>
+    </footer>
+
+    <script src="theme.js" charset="UTF-8"></script>
+    <script src="index.js" charset="UTF-8"></script>
+  </body>
 </html>
