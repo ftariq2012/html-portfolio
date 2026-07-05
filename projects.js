@@ -21,6 +21,24 @@ const projectSliders = {
       caption: "Logs and completion screen",
     },
   ],
+  "toronto-zoning": [
+    {
+      src: "assets/Project2/zoning-map-overview.png",
+      caption: "Toronto zoning map overview",
+    },
+    {
+      src: "assets/Project2/zoning-zone-details.png",
+      caption: "Selected zone with zoning details",
+    },
+    {
+      src: "assets/Project2/zoning-zoomed-zone-details.png",
+      caption: "Zoomed zone with parsed requirements",
+    },
+    {
+      src: "assets/Project2/zoning-mobile-view.png",
+      caption: "Responsive mobile map view",
+    },
+  ],
 };
 
 document.querySelectorAll("[data-slider]").forEach((slider) => {
