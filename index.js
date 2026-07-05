@@ -1,16 +1,25 @@
-const heading = $(".main-heading")[0];
-const fullText = heading.innerText;
-let charIndex = 0;
-const typingSpeed = 120;
+document.addEventListener("DOMContentLoaded", () => {
+  const heading = document.querySelector("[data-typewriter]");
 
-heading.innerText = "";
+  if (!heading) {
+    return;
+  }
 
-function typeWriter() {
-  if (charIndex < fullText.length) {
+  const fullText = heading.textContent;
+  let charIndex = 0;
+  const typingSpeed = 120;
+
+  heading.textContent = "";
+
+  function typeWriter() {
+    if (charIndex >= fullText.length) {
+      return;
+    }
+
     heading.textContent += fullText.charAt(charIndex);
     charIndex++;
-    setTimeout(typeWriter, typingSpeed);
+    window.setTimeout(typeWriter, typingSpeed);
   }
-}
 
-window.onload = typeWriter;
+  typeWriter();
+});

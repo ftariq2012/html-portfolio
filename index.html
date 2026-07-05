@@ -1,102 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Faraz Tariq | Portfolio</title>
+
     <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body class="page-load">
     <nav class="tab-nav">
-      <a href="./index.html">Home</a>
+      <a href="./index.html" class="active">Home</a>
       <a href="./projects.html">My Projects</a>
       <a href="FarazResume2025.pdf" target="_blank">Download Resume</a>
       <a href="./education.html">Education & Skills</a>
       <a href="./experience.html">Experience</a>
       <a href="./contact.html">Contact Me</a>
+
       <button id="themeToggle" class="theme-btn" aria-pressed="false">
         🌞/🌙
       </button>
     </nav>
 
-    <h1 class="main-heading" style="color: black">Hi, I'm Faraz Tariq_</h1>
+    <main class="home-page">
+      <section class="home-hero">
+        <div class="home-copy">
+          <h1 class="main-heading" data-typewriter>Hi, I'm Faraz Tariq_</h1>
 
-    <div class="header-line" style="color: black">
-      <h3>
-        Software Developer | Building innovative solutions with code and
-        creativity
-      </h3>
-    </div>
-
-    <img
-      class="wobble front-page"
-      src="assets/pexels-photo-546819.jpeg"
-      height="500"
-      width="500"
-    /><br />
-
-    <div class="container">
-      <div><h3 class="sub-heading" style="color: black">About Me</h3></div>
-      <div class="about-box wobble">
-        <p>
-          I'm a Computer Science & Data Science student with hands-on experience
-          in IT automation, data reporting, and full-stack development. I’ve
-          built real-world solutions using Python, Power BI, REST APIs, React,
-          and SQL. I'm passionate about solving problems through code and
-          currently learning Docker, TypeScript, and real-time apps with
-          WebSockets.
-        </p>
-      </div>
-
-      <div><h3 class="sub-heading" style="color: black">Beyond Code</h3></div>
-      <div class="box">
-        <div class="mini-box wobble gamer-box">
-          <img
-            src="assets/sports.png"
-            alt="Controller Icon"
-            class="controller"
-          />
-          <p><b class="underline-hover">Sports Enthusiast</b></p>
-          <p>
-            Whether it's playing or watching, I enjoy staying active and
-            following my favorite teams.
-          </p>
+          <div class="header-line">
+            <h3>
+              Software Developer | Building practical automation, data, and web
+              solutions
+            </h3>
+          </div>
         </div>
 
-        <div class="mini-box wobble comic-box">
-          <img
-            src="assets/spiderman.png"
-            class="spidey"
-            alt="Spiderman pixel art"
-          />
-          <p><b class="underline-hover">Comic Book Fan</b></p>
+        <img
+          class="wobble front-page"
+          src="assets/my_image.jpeg"
+          alt="Faraz Tariq"
+          height="500"
+          width="500"
+        />
+      </section>
+
+      <section class="home-section">
+        <h2 class="sub-heading">About Me</h2>
+        <div class="about-box wobble">
           <p>
-            I love exploring stories and characters across Marvel, DC, and indie
-            universes.
+            I'm a Computer Science & Data Science graduate with hands-on
+            experience in software development, API integrations, data
+            pipelines, automation, and operational reporting.
           </p>
         </div>
+      </section>
 
-        <div class="mini-box wobble gamer-box">
-          <img
-            src="assets/controller.png"
-            alt="Controller Icon"
-            class="controller"
-          />
-          <p><b class="underline-hover">Gamer at Heart</b></p>
-          <p>
-            From strategy to open-world adventures, games fuel my curiosity and
-            problem-solving skills.
-          </p>
+      <section class="home-section">
+        <h2 class="sub-heading">Beyond Code</h2>
+        <div class="box">
+          <div class="mini-box wobble gamer-box">
+            <img
+              src="assets/sports.png"
+              alt="Sports icon"
+              class="controller"
+            />
+            <p><b class="underline-hover">Sports Enthusiast</b></p>
+            <p>
+              Whether it's playing or watching, I enjoy staying active and
+              following my favorite teams.
+            </p>
+          </div>
+
+          <div class="mini-box wobble comic-box">
+            <img
+              src="assets/spiderman.png"
+              class="spidey"
+              alt="Spiderman pixel art"
+            />
+            <p><b class="underline-hover">Comic Book Fan</b></p>
+            <p>
+              I love exploring stories and characters across Marvel, DC, and
+              indie universes.
+            </p>
+          </div>
+
+          <div class="mini-box wobble gamer-box">
+            <img
+              src="assets/controller.png"
+              alt="Controller icon"
+              class="controller"
+            />
+            <p><b class="underline-hover">Gamer at Heart</b></p>
+            <p>
+              From strategy to open-world adventures, games fuel my curiosity
+              and problem-solving skills.
+            </p>
+          </div>
         </div>
-      </div>
-      <br />
-    </div>
+      </section>
+    </main>
 
-    <footer style="color: black">
+    <footer class="site-footer">
       <b>© 2025 Faraz Tariq. All rights reserved.</b>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="index.js" charset="UTF-8"></script>
+
     <script src="theme.js" charset="UTF-8"></script>
+    <script src="index.js" charset="UTF-8"></script>
   </body>
 </html>

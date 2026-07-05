@@ -1,10 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Faraz Tariq | Projects</title>
+
     <link rel="stylesheet" href="style.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
@@ -14,84 +16,162 @@
   <body class="page-load">
     <nav class="tab-nav">
       <a href="./index.html">Home</a>
-      <a href="./projects.html">My Projects</a>
+      <a href="./projects.html" class="active">My Projects</a>
       <a href="FarazResume2025.pdf" target="_blank">Download Resume</a>
       <a href="./education.html">Education & Skills</a>
       <a href="./experience.html">Experience</a>
       <a href="./contact.html">Contact Me</a>
+
       <button id="themeToggle" class="theme-btn" aria-pressed="false">
         🌞/🌙
       </button>
     </nav>
 
-    <h1 class="main-heading">My Projects</h1>
+    <main>
+      <h1 class="main-heading">My Projects</h1>
 
-    <div class="projects">
-      <section class="project">
-        <h3 class="sub-heading">Bulk PDF Tool</h3>
-        <div class="project-row">
-          <img
-            class="project-image"
-            src="assets/pexels-photo-546819.jpeg"
-            alt="Bulk PDF Tool screenshot"
-          />
-          <div class="project-desc wobble">
+      <p class="projects-intro">
+        Selected work across automation, web development, and practical problem
+        solving.
+      </p>
+
+      <div class="projects">
+        <section class="project-card project-feature">
+          <div class="project-slider" data-slider="bulk-pdf">
+            <button
+              class="slider-btn prev-btn"
+              type="button"
+              aria-label="Previous Bulk PDF Tool screenshot"
+              data-direction="prev"
+            >
+              ‹
+            </button>
+
+            <img
+              src="assets/Project1/Merge.png"
+              alt="Bulk PDF Tool merge screen"
+              class="slider-image"
+              data-slider-image
+            />
+
+            <button
+              class="slider-btn next-btn"
+              type="button"
+              aria-label="Next Bulk PDF Tool screenshot"
+              data-direction="next"
+            >
+              ›
+            </button>
+
+            <div class="slider-caption" data-slider-caption>
+              Merge PDFs screen
+            </div>
+
+            <div class="slider-dots" data-slider-dots></div>
+          </div>
+
+          <div class="project-info">
+            <p class="project-kicker">Featured Project</p>
+            <h2>Bulk PDF Tool</h2>
+
             <p>
-              The creation of this project started when my friend had a usecase
-              for his work where he didn't wanted to do repetitive tasks on
-              hundreds of PDFs. When he reached out to me I saw this as an
-              oppurtunity to create a Bulk PDF Editor where you can select
-              directories with multiple PDFs and do actions like Merge
-              atatchments, Swap pages, Add Pages, Add Watermarks or Stamps. I
-              used Python to code this project and used PyPDF2 library to
-              manipulate pdfs and logging to have cleaner logs accomplish this
-              task. With this project I reduced the time to seconds where
-              initially it would have taken my friend days to accomplish this
-              task.
+              A desktop app that <strong>automates repetitive PDF work</strong>
+              across large folders. It helps users merge attachments, swap
+              pages, add pages, apply stamps, and review logs without manually
+              opening every file.
             </p>
-          </div>
-        </div>
-      </section>
 
-      <section class="project">
-        <h3 class="sub-heading">Self-Hosted File Manager</h3>
-        <div class="project-row">
-          <img
-            class="project-image"
-            src="assets/pexels-photo-546819.jpeg"
-            alt="Self-hosted file manager screenshot"
-          />
-          <div class="project-desc wobble">
-            <p>
-              Work-In-Progess: Using a raspberry Pi as the self hosting server.
-              Need to create a web-app that lets me access files on the server
-              regardless of what network I am on. Also want the files to be
-              encrypted so the server can be used as a password manager as well.
-            </p>
-          </div>
-        </div>
-      </section>
+            <div class="project-tools" aria-label="Tools used">
+              <span>Python</span>
+              <span>Tkinter</span>
+              <span>PyPDF2</span>
+              <span>PDF Automation</span>
+              <span>Logging</span>
+            </div>
 
-      <section class="project">
-        <h3 class="sub-heading">This Website</h3>
-        <div class="project-row">
-          <img
-            class="project-image"
-            src="assets/pexels-photo-546819.jpeg"
-            alt="Website project screenshot"
-          />
-          <div class="project-desc wobble">
-            <p>Description for project 3</p>
+            <a
+              href="https://github.com/ftariq2012/pdf-merger"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="github-btn"
+            >
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 16 16"
+                width="18"
+                height="18"
+              >
+                <path
+                  fill="currentColor"
+                  d="M8 0C3.58 0 0 3.67 0 8.2c0 3.63 2.29 6.7 5.47 7.79.4.08.55-.18.55-.4v-1.52c-2.23.5-2.7-.98-2.7-.98-.36-.95-.89-1.2-.89-1.2-.73-.51.05-.5.05-.5.81.06 1.24.85 1.24.85.72 1.27 1.89.9 2.35.69.07-.53.28-.9.51-1.1-1.78-.21-3.64-.91-3.64-4.05 0-.9.31-1.62.83-2.2-.08-.21-.36-1.05.08-2.18 0 0 .68-.22 2.22.84A7.45 7.45 0 0 1 8 3.96c.69 0 1.38.1 2.02.28 1.54-1.06 2.22-.84 2.22-.84.44 1.13.16 1.97.08 2.18.52.58.83 1.3.83 2.2 0 3.15-1.87 3.84-3.65 4.05.29.26.54.76.54 1.54v2.22c0 .22.15.48.55.4A8.11 8.11 0 0 0 16 8.2C16 3.67 12.42 0 8 0Z"
+                />
+              </svg>
+              View on GitHub
+            </a>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
 
-    <footer style="color: black">
+        <section class="project-grid">
+          <article class="project-card compact-project">
+            <img
+              class="project-thumb"
+              src="assets/pexels-photo-546819.jpeg"
+              alt="Self-hosted file manager project preview"
+            />
+
+            <div class="project-info">
+              <p class="project-kicker">Work in Progress</p>
+              <h2>Self-Hosted File Manager</h2>
+
+              <p>
+                A <strong>Raspberry Pi based file server</strong> for accessing
+                personal files from anywhere, with future plans for encryption
+                and secure remote access.
+              </p>
+
+              <div class="project-tools" aria-label="Tools used">
+                <span>Raspberry Pi</span>
+                <span>Linux</span>
+                <span>Web App</span>
+                <span>Self-Hosting</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card compact-project">
+            <img
+              class="project-thumb"
+              src="assets/pexels-photo-546819.jpeg"
+              alt="Portfolio website project preview"
+            />
+
+            <div class="project-info">
+              <p class="project-kicker">Portfolio Build</p>
+              <h2>This Website</h2>
+
+              <p>
+                A <strong>responsive portfolio site</strong> with a retro
+                pixel-style design, project pages, and a custom day/night theme.
+              </p>
+
+              <div class="project-tools" aria-label="Tools used">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Responsive Design</span>
+              </div>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
       <b>© 2025 Faraz Tariq. All rights reserved.</b>
     </footer>
 
     <script src="theme.js" charset="UTF-8"></script>
     <script src="index.js" charset="UTF-8"></script>
+    <script src="projects.js" charset="UTF-8"></script>
   </body>
 </html>
