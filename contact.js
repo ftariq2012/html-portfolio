@@ -2,6 +2,8 @@ const contactCaptcha = document.getElementById("contactCaptcha");
 const captchaAnswer = document.getElementById("captchaAnswer");
 const captchaMessage = document.getElementById("captchaMessage");
 const privateContactInfo = document.getElementById("privateContactInfo");
+const messageForm = document.getElementById("messageForm");
+const messageFormStatus = document.getElementById("messageFormStatus");
 
 const protectedContact = {
   email: ["faraztariq05", "gmail", "com"],
@@ -42,5 +44,45 @@ if (contactCaptcha) {
     privateContactInfo.hidden = false;
     captchaMessage.textContent = "Verified. Direct contact info is now visible.";
     contactCaptcha.querySelector("button").disabled = true;
+  });
+}
+
+if (messageForm) {
+  messageForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitButton = messageForm.querySelector('button[type="submit"]');
+    const formData = new FormData(messageForm);
+    const originalButtonText = submitButton.textContent;
+
+    messageFormStatus.textContent = "Sending your message...";
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
+    try {
+      const response = await fetch(messageForm.action, {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error("Message could not be sent.");
+      }
+
+      messageForm.reset();
+      messageFormStatus.textContent =
+        "Message sent. Thanks for reaching out.";
+    } catch (error) {
+      messageFormStatus.textContent =
+        "Something went wrong. Please try again or use LinkedIn.";
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalButtonText;
+    }
   });
 }

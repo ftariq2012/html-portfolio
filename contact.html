@@ -77,6 +77,69 @@
         </div>
       </section>
 
+      <section class="message-card">
+        <div class="message-card-copy">
+          <p class="project-kicker">Send a message</p>
+          <h2>Write to me directly</h2>
+        </div>
+
+        <form
+          class="contact-form"
+          id="messageForm"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="fe4c0a53-c0cf-44e0-9a21-e14af2b7f40d"
+          />
+          <input
+            type="hidden"
+            name="subject"
+            value="New portfolio message from faraztariq.me"
+          />
+          <input type="checkbox" name="botcheck" class="hidden-field" />
+
+          <div class="form-grid">
+            <label>
+              Name
+              <input
+                type="text"
+                name="name"
+                autocomplete="name"
+                placeholder="Your name"
+                required
+              />
+            </label>
+
+            <label>
+              Email
+              <input
+                type="email"
+                name="email"
+                autocomplete="email"
+                placeholder="your.email@example.com"
+                required
+              />
+            </label>
+          </div>
+
+          <label>
+            Message
+            <textarea
+              name="message"
+              rows="6"
+              placeholder="Tell me what you want to connect about"
+              required
+            ></textarea>
+          </label>
+
+          <button type="submit">Send Message</button>
+          <p class="form-message" id="messageFormStatus" aria-live="polite"></p>
+        </form>
+      </section>
+
       <section class="private-contact-card">
         <div>
           <p class="project-kicker">Human check</p>
